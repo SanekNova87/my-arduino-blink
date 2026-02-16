@@ -1,11 +1,17 @@
+int ledPin1 = 13;
+int ledPin2 = 12;
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(200); // Изменено с 1000 на 200
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(200); // Изменено с 1000 на 200
+  // Первый светодиод горит, второй гаснет, и наоборот
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, LOW);
+  delay(500);
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, HIGH);
+  delay(500);
 }
